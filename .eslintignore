@@ -1,0 +1,6 @@
+**/@types/**/*.*
+*.d.ts
+/node_modules
+/build
+/.idea
+/.vscode

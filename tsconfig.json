@@ -1,0 +1,10 @@
+{
+  "extends": "@wwwoda/tsconfig",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "build",
+    "jsx": "react-jsx"
+  },
+  "include": ["src", ".eslintrc.cjs"],
+  "exclude": ["node_modules", "build"]
+}

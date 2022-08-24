@@ -1,0 +1,37 @@
+/build
+
+### Logs ###
+*.log
+
+### Node ###
+.node/
+node_modules/
+npm-debug.log
+.npmrc
+
+### Log files ###
+**/log
+npm-debug.log*
+yarn-error.log*
+
+### Mac OSX + Windows ###
+.DS_Store
+Thumbs.db
+
+### Vim ###
+*.sw[op]
+*.un~
+
+### Editor directory ###
+.idea
+.vscode
+**/.idea
+**/.vscode
+
+### Archives ###
+*.tar.gz
+*.zip
+
+### Yalc ###
+yalc.lock
+.yalc
