@@ -63,7 +63,7 @@ export function useEntityRecords<T extends Record<string, any>>(
         // @ts-ignore
         getIsResolving,
       } = select('core');
-      const data = getEntityRecords(kind, name, queryArgs) as T[] | undefined || null;
+      const data = (getEntityRecords(kind, name, queryArgs) as T[] | undefined) || null;
       const isResolving = !!(getIsResolving as GetIsResolving)('getEntityRecords', args);
       const hasResolved = !isResolving && (hasFinishedResolution as HasFinishedResolution)('getEntityRecords', args);
       const status = getStatus(!!data, isResolving, hasResolved);
