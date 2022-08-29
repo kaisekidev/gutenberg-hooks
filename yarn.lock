@@ -4528,7 +4528,7 @@ normalize-wheel@^1.0.1:
   resolved "https://registry.yarnpkg.com/normalize-wheel/-/normalize-wheel-1.0.1.tgz#aec886affdb045070d856447df62ecf86146ec45"
   integrity sha512-1OnlAPZ3zgrk8B91HyRj+eVv+kS5u+Z0SCsak6Xil/kmgEia50ga7zfkumayonZrImffAxPU/5WcyGhzetHNPA==
 
-np@^7.6.2:
+np@*:
   version "7.6.2"
   resolved "https://registry.yarnpkg.com/np/-/np-7.6.2.tgz#02650c024b232cb8c958846c44f672c2f8951b7c"
   integrity sha512-gExmKGKixh7ITc4Q+Lv7nfCby0CVKvzri9zN8970oKD8976T4L5dw8QWUtMcXcIjhFF6h5lbvztao/NurDbmxQ==
