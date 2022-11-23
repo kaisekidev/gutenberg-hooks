@@ -2,7 +2,7 @@
 import { useSelect } from '@wordpress/data';
 import { addQueryArgs } from '@wordpress/url';
 
-import { getStatus } from './useEntityRecord.js';
+import { getStatus, Status } from './useEntityRecord.js';
 import { HasFinishedResolution } from './useHasFinishedResolution.js';
 import { GetIsResolving } from './useIsResolving.js';
 /**
@@ -62,7 +62,20 @@ export function useEntityRecords<T extends Record<string, any>>(
         // @ts-ignore
         getIsResolving,
       } = select('core');
-      const data = (getEntityRecords(kind, name, queryArgs) as T[] | undefined) || null;
+
+      let data = null
+      try {
+        data = (getEntityRecords(kind, name, queryArgs) as T[] | undefined) || null;
+      } catch (e) {
+        return {
+          data,
+          status: Status.Error,
+          isResolving: false,
+          hasResolved: false,
+        };
+      }
+
+      // const data = (getEntityRecords(kind, name, queryArgs) as T[] | undefined) || null;
       const isResolving = !!(getIsResolving as GetIsResolving)('getEntityRecords', args);
       const hasResolved = !isResolving && (hasFinishedResolution as HasFinishedResolution)('getEntityRecords', args);
       const status = getStatus(!!data, isResolving, hasResolved);

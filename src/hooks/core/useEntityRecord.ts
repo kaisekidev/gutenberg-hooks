@@ -73,7 +73,17 @@ export const useEntityRecord = <T extends Record<string, any>>(
       } = select('core');
       // cast key to string due to incorrect type for getEntityRecord in @types/wordpress__core-data
       // TODO: remove this cast when @types/wordpress__core-data is updated
-      const data = (getEntityRecord(kind, name, key as number) as T | undefined) || null;
+      let data = null;
+      try {
+        data = (getEntityRecord(kind, name, key as number) as T | undefined) || null;
+      } catch (e) {
+        return {
+          data,
+          status: Status.Error,
+          isResolving: false,
+          hasResolved: false,
+        };
+      }
       const isResolving = !!(getIsResolving as GetIsResolving)('getEntityRecord', args);
       const hasResolved = !isResolving && (hasFinishedResolution as HasFinishedResolution)('getEntityRecord', args);
       const status = getStatus(!!data, isResolving, hasResolved);
