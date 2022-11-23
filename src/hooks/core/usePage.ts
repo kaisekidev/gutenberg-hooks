@@ -1,6 +1,6 @@
-import { Schema } from '@wordpress/core-data';
-
 import { useEntityRecord } from './useEntityRecord.js';
 
-export const usePage = <T extends Schema.BasePost<'edit'>>(id: number) =>
+import type { BasePage } from '../../types.js';
+
+export const usePage = <T extends BasePage>(id: number) =>
   useEntityRecord<T>('postType', 'page', id);

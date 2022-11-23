@@ -25,3 +25,5 @@ export * from './hooks/editor/useIsSavingPost.js';
 export * from './hooks/editor/usePermalink.js';
 export * from './hooks/editor/usePostMeta.js';
 export * from './hooks/editor/usePostStatus.js';
+
+export * from './types.js';

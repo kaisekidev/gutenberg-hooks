@@ -29,11 +29,11 @@ export const getStatus = (hasData: boolean, isResolving: boolean, hasResolved: b
  * @param  key      Key of the requested entity record.
  * @example
  * ```js
- * import { useEntityRecord } from '@kaiseki/gutenberg-hooks';
+ * import { useEntityRecord, PostOrPage } from '@kaiseki/gutenberg-hooks';
  * import type { Schema } from '@wordpress/core-data';
  *
  * const PageTitleDisplay= (id) => {
- *   const { record, isResolving } = useEntityRecord<Schema.Page['edit']>('postType', 'page', id);
+ *   const { record, isResolving } = useEntityRecord<PostOrPage>('postType', 'page', id);
  *
  *   if (isResolving) {
  *     return 'Loading...';

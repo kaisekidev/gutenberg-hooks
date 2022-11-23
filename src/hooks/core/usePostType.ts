@@ -1,6 +1,6 @@
-import { Schema } from '@wordpress/core-data';
-
 import { useEntityRecord } from './useEntityRecord.js';
 
-export const usePostType = <T extends Schema.Type<'edit'>>(slug: string) =>
+import type { PostType } from '../../types.js';
+
+export const usePostType = <T extends PostType>(slug: string) =>
   useEntityRecord<T>('root', 'postType', slug);

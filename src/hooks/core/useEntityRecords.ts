@@ -14,11 +14,10 @@ import { GetIsResolving } from './useIsResolving.js';
  *                   requested API endpoint.
  * @example
  * ```js
- * import { useEntityRecords } from '@kaiseki/gutenberg-hooks';
- * import type { Schema } from '@wordpress/core-data';
+ * import { useEntityRecords, PostOrPage } from '@kaiseki/gutenberg-hooks';
  *
  * function getPageTitles() {
- *   const { records, isResolving } = useEntityRecords<Schema.Page['edit']>( 'postType', 'page' );
+ *   const { records, isResolving } = useEntityRecords<PostOrPage>( 'postType', 'page' );
  *
  *   if (isResolving) {
  *     return 'Loading...';
