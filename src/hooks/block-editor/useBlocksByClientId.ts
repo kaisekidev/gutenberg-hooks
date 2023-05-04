@@ -1,4 +1,4 @@
 import { useSelect } from '@wordpress/data';
 
 export const useBlocksByClientId = (clientIds: string | string[]) =>
-  useSelect((select) => select('core/block-editor').getBlocksByClientId(clientIds), [clientIds]);
+  useSelect((select) => select('core/editor').getBlocksByClientId(clientIds), [clientIds]);
