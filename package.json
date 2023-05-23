@@ -1,6 +1,6 @@
 {
   "name": "@kaiseki/gutenberg-hooks",
-  "version": "0.1.0-alpha6",
+  "version": "0.1.0-alpha7",
   "license": "MIT",
   "description": "Custom react hooks for the WordPress Block Editor (Gutenberg)",
   "type": "module",
