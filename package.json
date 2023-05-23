@@ -1,6 +1,6 @@
 {
   "name": "@kaiseki/gutenberg-hooks",
-  "version": "0.1.0-alpha5",
+  "version": "0.1.0-alpha6",
   "license": "MIT",
   "description": "Custom react hooks for the WordPress Block Editor (Gutenberg)",
   "type": "module",
@@ -75,10 +75,10 @@
     "prettier-eslint-cli": "^7.1.0",
     "typescript": "^4.8.2 || ^5.0.0"
   },
-	"peerDependencies": {
+  "peerDependencies": {
     "@types/react": "^18.2.0",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
-	},
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "prettier": "@wwwoda/prettier-config"
 }
